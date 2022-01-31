@@ -1,7 +1,8 @@
 ﻿#include <iostream>
-#include <GLFW/glfw3.h>
-#include "graphics/glfw.h"
+#include <glc.h>
 #include "graphics/window.h"
+#include "graphics/glfw.h"
+
 
 int main()
 {

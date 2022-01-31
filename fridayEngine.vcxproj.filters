@@ -24,12 +24,18 @@
     <ClCompile Include="src\graphics\window.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\glfw.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\graphics\window.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\usefull\glc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
