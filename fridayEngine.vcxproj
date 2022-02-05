@@ -163,6 +163,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\game\Camera.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="src\graphics\ShaderSystem.cpp" />
     <ClCompile Include="src\graphics\glfw.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="src\graphics\VAO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\game\Camera.h" />
     <ClInclude Include="src\graphics\ShaderSystem.h" />
     <ClInclude Include="src\graphics\glfw.h" />
     <ClInclude Include="src\graphics\window.h" />

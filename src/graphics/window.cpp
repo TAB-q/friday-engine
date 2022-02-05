@@ -1,6 +1,9 @@
 #include "ShaderSystem.h"
 #include "window.h"
 #include "VAO.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 window::window(const char* title, const int width, const int height)
 {
@@ -29,6 +32,8 @@ void window::loop()
 	testShader.bindAttribute(0, "position");
 	testShader.link();
 	testShader.use();
+
+	glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 
 	while (!glfwWindowShouldClose(mainWindow)) {
 		glClearColor(0.0f, 0.7f, 0.0f, 1.0f);
