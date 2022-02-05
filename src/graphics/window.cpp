@@ -1,3 +1,4 @@
+#include "ShaderSystem.h"
 #include "window.h"
 #include "VAO.h"
 
@@ -23,6 +24,11 @@ void window::loop()
 	   -1, -1, 0,
 		1, -1, 0
 	});
+
+	GL::ShaderSystem testShader("test");
+	testShader.bindAttribute(0, "position");
+	testShader.link();
+	testShader.use();
 
 	while (!glfwWindowShouldClose(mainWindow)) {
 		glClearColor(0.0f, 0.7f, 0.0f, 1.0f);
