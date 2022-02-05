@@ -14,7 +14,7 @@ int main()
 		std::cout << "Hello World!\n";
 
 		glfw glfw;
-		window win(WINDOW_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT);
+		window win(WINDOW_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT);    
 		win.loop();
 	}
 	catch(std::runtime_error e) {

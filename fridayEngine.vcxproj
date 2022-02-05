@@ -167,11 +167,13 @@
     <ClCompile Include="src\graphics\glfw.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\graphics\window.cpp" />
+    <ClCompile Include="src\graphics\VAO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\glfw.h" />
     <ClInclude Include="src\graphics\window.h" />
     <ClInclude Include="src\usefull\glc.h" />
+    <ClInclude Include="src\graphics\VAO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
