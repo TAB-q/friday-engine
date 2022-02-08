@@ -11,6 +11,8 @@ namespace GL {
 	private:
 		GLuint mProgram;
 		GLuint loadShader(const std::string& path, GLenum shaderType);
+		GLint setFloat(const std::string& name, float value);
+		GLint getLocation(const std::string& name);
 		GLuint mVertex;
 		GLuint mFragment;
 	public:

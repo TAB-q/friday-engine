@@ -33,8 +33,6 @@ void window::loop()
 	testShader.link();
 	testShader.use();
 
-	glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
-
 	while (!glfwWindowShouldClose(mainWindow)) {
 		glClearColor(0.0f, 0.7f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);

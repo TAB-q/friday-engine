@@ -5,7 +5,6 @@ GL::ShaderSystem::ShaderSystem(const std::string& name)
 	mProgram = glCreateProgram();
 	mVertex = loadShader("res/" + name + ".vert", GL_VERTEX_SHADER);
 	mFragment = loadShader("res/" + name + ".frag", GL_FRAGMENT_SHADER);
-	// TODO: возможно ошибка считывания шейдеров здесь (в путях файлов)
 }
 
 GLuint GL::ShaderSystem::loadShader(const std::string& path, GLenum shaderType)
@@ -21,7 +20,7 @@ GLuint GL::ShaderSystem::loadShader(const std::string& path, GLenum shaderType)
 
 	glCompileShader(shader);
 
-	// это наверное надо будет в отдельную переключаемую функцию вывести
+	// это наверное надо будет в отдельную переключаемую функцию вывести ???
 	GLint status;
 	glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
 	char buf[0x1000];
@@ -31,9 +30,6 @@ GLuint GL::ShaderSystem::loadShader(const std::string& path, GLenum shaderType)
 	if (len > 0) {
 		std::cout << "WARNING: Can't compile shader:" << path << std::endl << buf << std::endl;
 	}
-	/*else {
-		std::cout << "Everything works fine\n"; // чисто для проверки
-	}*/
 
 	return shader;
 }
@@ -54,6 +50,16 @@ void GL::ShaderSystem::bindAttribute(GLuint index, const std::string& name)
 void GL::ShaderSystem::use()
 {
 	glUseProgram(mProgram);
+}
+
+GLint GL::ShaderSystem::setFloat(const std::string& name, float value)
+{
+	glUniform1f(getLocation(name), value);
+}
+
+GLint GL::ShaderSystem::getLocation(const std::string& name)
+{
+	return glGetUniformLocation(mProgram, name.c_str());
 }
 
 GL::ShaderSystem::~ShaderSystem()
