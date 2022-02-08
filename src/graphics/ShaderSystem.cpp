@@ -52,7 +52,7 @@ void GL::ShaderSystem::use()
 	glUseProgram(mProgram);
 }
 
-GLint GL::ShaderSystem::setFloat(const std::string& name, float value)
+void GL::ShaderSystem::setFloat(const std::string& name, float value)
 {
 	glUniform1f(getLocation(name), value);
 }

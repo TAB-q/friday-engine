@@ -11,16 +11,16 @@ namespace GL {
 	private:
 		GLuint mProgram;
 		GLuint loadShader(const std::string& path, GLenum shaderType);
-		GLint setFloat(const std::string& name, float value);
-		GLint getLocation(const std::string& name);
 		GLuint mVertex;
 		GLuint mFragment;
+		GLint getLocation(const std::string& name);
 	public:
 		ShaderSystem(const std::string& name);
 		~ShaderSystem();
 		void link();
 		void bindAttribute(GLuint index, const std::string& name);
 		void use();
+		void setFloat(const std::string& name, float value);
 	};
 }
 
